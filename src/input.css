@@ -207,4 +207,15 @@
 
 html{
     scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+@media screen and (min-width: 300px) and (max-width: 770px) {
+    .custombtn{
+        display: hidden !important;
+    }
 }

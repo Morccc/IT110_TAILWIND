@@ -26,52 +26,46 @@
     <section class="pt-10 md:pt-3">
         <div class="container max-w-screen-xl mx-auto px-4">
             <!-- Navbar -->
-            <nav
-                class="fixed top-0 left-0 right-0 px-4 py-2 bg-neutral-200 shadow-md z-50 flex items-center justify-between logoleft">
+            <nav class="fixed top-0 left-0 right-0 px-4 py-2 bg-neutral-200 shadow-md z-50 flex items-center justify-between">
                 <!-- Logo on the far left -->
                 <img src="./assets/svg/bookmark-square.svg" alt="Logo" class="w-8 h-8 mr-8">
-
+    
                 <!-- Mobile Menu Button -->
-                <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-none">
+                <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-none custombtn">
                     <img src="./assets/svg/list.svg" alt="Menu Icon" class="w-6 h-6">
                 </button>
-
-                <!-- Navigation Links -->
-                <div id="menu" class="hidden md:flex md:space-x-6 flex-grow items-center homeee">
-                    <a href="#home"
-                        class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center">
-                        <img src="./assets/svg/home.svg" alt="Home Icon" class="w-5 h-5 mr-1">
-                        Home
+    
+                <!-- Navigation Links (Dropdown) -->
+                <div id="menu" class="customnav hidden absolute top-12 left-0 right-0 bg-neutral-200 shadow-lg md:flex md:static md:space-x-6 flex-col md:flex-row gap-2 items-center transition-all duration-300 ease-in-out">
+                    <a href="#home" class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center justify-end">
+                        <img src="./assets/svg/home.svg" alt="Home Icon" class="w-5 h-5 mr-1">Home
                     </a>
-                    <a href="#About"
-                        class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center">
-                        <img src="./assets/svg/about.svg" alt="About Icon" class="w-5 h-5 mr-1">
-                        About
+                    <a href="#About" class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center justify-end">
+                        <img src="./assets/svg/about.svg" alt="About Icon" class="w-5 h-5 mr-1">About
                     </a>
-                    <a href="#skills"
-                        class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center skillsss">
-                        <img src="./assets/svg/resume.svg" alt="Resume Icon" class="w-5 h-5 mr-1">
-                        Skills
+                    <a href="#skills" class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center justify-end">
+                        <img src="./assets/svg/resume.svg" alt="Resume Icon" class="w-5 h-5 mr-1">Skills
                     </a>
-                    <a href="#contact"
-                        class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center contacttt">
-                        <img src="./assets/svg/contacts.svg" alt="Contact Icon" class="w-5 h-5 mr-1">
-                        Contact
+                    <a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium transition duration-300 flex items-center justify-end">
+                        <img src="./assets/svg/contacts.svg" alt="Contact Icon" class="w-5 h-5 mr-1">Contact
                     </a>
                 </div>
             </nav>
         </div>
-
+    
         <!-- JavaScript to Toggle the Dropdown Menu -->
         <script>
             const menuToggle = document.getElementById('menu-toggle');
             const menu = document.getElementById('menu');
-
+    
             menuToggle.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
+                menu.classList.toggle('block'); // Display as block when shown
             });
         </script>
     </section>
+    
+    
 
     <!-- Home Section -->
     <section id="home"
